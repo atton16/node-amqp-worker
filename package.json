@@ -1,0 +1,28 @@
+{
+  "name": "amqp-worker-engine",
+  "version": "1.0.1",
+  "description": "AMQP Worker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atton16/node-amqp-worker.git"
+  },
+  "keywords": [
+    "amqp",
+    "rabbitmq",
+    "mq",
+    "worker"
+  ],
+  "author": "Attawit Kittikrairit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atton16/node-amqp-worker/issues"
+  },
+  "homepage": "https://github.com/atton16/node-amqp-worker#readme",
+  "dependencies": {
+    "amqplib": "^0.5.2"
+  }
+}
