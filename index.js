@@ -6,7 +6,7 @@ const config = {
   queue: 'work'
 };
 
-let workFn = function(ack, work) {
+let workFn = function(work, ack) {
   console.warn('Undefined work function!');
   ack();
 }
