@@ -84,11 +84,13 @@ function doWork(ch, msg) {
   workFn(work, function (replyStr){
     // RPC Work
     if (msg.properties.replyTo) {
-      if (typeof replyStr !== 'string') {
+      if (!replyStr) {
+        replyStr = '';
+      } else if (typeof replyStr !== 'string') {
         throw new Error('replyStr is not a string');
       }
       ch.sendToQueue(msg.properties.replyTo,
-        new Buffer(replyStr),
+        Buffer.from(replyStr, 'utf8'),
         {correlationId: msg.properties.correlationId});
     }
 
