@@ -1,6 +1,6 @@
 {
   "name": "amqp-worker-engine",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "AMQP Worker",
   "main": "index.js",
   "scripts": {
