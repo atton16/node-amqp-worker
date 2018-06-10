@@ -81,7 +81,20 @@ function doWork(ch, msg) {
     return;
   }
 
-  workFn(function(){ ch.ack(msg); }, work);
+  workFn(work, function (replyStr){
+    // RPC Work
+    if (msg.properties.replyTo) {
+      if (typeof replyStr !== 'string') {
+        throw new Error('replyStr is not a string');
+      }
+      ch.sendToQueue(msg.properties.replyTo,
+        new Buffer(replyStr),
+        {correlationId: msg.properties.correlationId});
+    }
+
+    ch.ack(msg);
+  });
+
 }
 
 function parseWork(content) {
