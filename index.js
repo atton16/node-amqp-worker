@@ -26,7 +26,6 @@ function reconnect() {
 function onConnected(conn) {
   conn.on('close', onClosed);
   console.log('Connected to Queue Server.');
-  process.once('SIGINT', conn.close);
   return conn.createChannel()
     .then(ch => onChannelCreated(conn, ch));
 }
