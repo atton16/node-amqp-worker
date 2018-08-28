@@ -14,7 +14,7 @@ const config = {
   queue: 'my-works'
 };
 
-worker(config, function(work, ack) {
+const workFn = function(work, ack) {
   switch(work.name) {
   case 'greet':
     console.log('Hello');
@@ -28,7 +28,9 @@ worker(config, function(work, ack) {
   	break;
   }
   ack();
-});
+};
+
+worker(config, workFn);
 
 ```
 
