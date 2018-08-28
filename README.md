@@ -40,7 +40,7 @@ const workFn = function(work, ack) {
     break;
     
   default:
-  	break;
+    break;
   }
   ack();
 };
@@ -68,8 +68,8 @@ The message published to work queue MUST BE conform to the following format.
 
 ```javascript
 {
-	name: string,
-    args: object  // Optional
+  name: string,
+  args: object  // Optional
 }
 ```
 
