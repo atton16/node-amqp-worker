@@ -1,4 +1,4 @@
-# amqp-worker-engine
+# node-amqp-worker
 
 Node.JS AMQP Worker Engine
 
@@ -13,6 +13,11 @@ Consume work from specified work queue and notify MQ Broker once the work is com
 3. Support multi-work in single queue
 
 4. Support work input arguments
+
+### Installation
+```bash
+$ npm i amqp-worker-engine
+```
 
 ### Usage Example
 
