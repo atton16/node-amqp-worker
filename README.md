@@ -1,4 +1,4 @@
-# node-amqp-worker
+# amqp-worker-engine
 
 Node.JS AMQP Worker Engine
 
