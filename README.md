@@ -4,6 +4,16 @@ Node.JS AMQP Worker Engine
 
 Consume work from specified work queue and notify MQ Broker once the work is complete.
 
+### Features
+
+1. AMQP Queue Consumer with Acknowledgement
+
+2. Auto-reconnect on connection lost
+
+3. Support multi-work in single queue
+
+4. Support work input arguments
+
 ### Usage Example
 
 ```javascript
