@@ -64,7 +64,7 @@ worker(config, workFn);
 
 Work message is parsed as an object to the `Work Function`.
 
-The message published to work queue MUST BE conform to the following format.
+The message published to work queue MUST conform to the following format.
 
 ```javascript
 {
